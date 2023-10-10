@@ -13,7 +13,7 @@ int main()
     printf("Tamanho máximo dos nomes dos funcionários: \n");
     scanf("%d", &y);
 
-    for(int i = 0; i < y; i++) {
+    for(int i = 0; i < x; i++) {
         funcionarios[i] = malloc(y * sizeof(char));
     }
 
@@ -27,5 +27,10 @@ int main()
     for(int i = 0; i < x; i++) {
         printf("Funcionário %d: %s \n", i, funcionarios[i]);
     }
+
+    for(int i = 0; i < x; i++) {
+        free(funcionarios[i]);
+    }
+    free(funcionarios);
 
 }
